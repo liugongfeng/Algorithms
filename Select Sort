@@ -1,0 +1,18 @@
+
+# find out the smallest number of array and return its index
+def findSmallest(arr):
+	smallest = arr[0]
+	smallest_index = 0
+	for i in arr[1:]:
+		if arr[i] < smallest:
+			smallest = arr[i]
+			smallest_index = i
+	return smallest_index
+	
+	
+def selectSort(arr):
+	newArr = []
+	for i in range(len(arr) ):
+		smallest = findSmallest(arr)        # this smallest receives index of the rest of array
+		newArr.append(arr.pop(smallest))	# pop out from arr and add to newArr 
+	return newArr
