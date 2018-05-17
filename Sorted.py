@@ -82,7 +82,7 @@ def insertSort( arr ):
 # shell Sort
 def shellSort(arr):
     n = len(arr)
-    gap = round(n/2)
+    gap = n // 2
     while gap>0:
         for i in range(gap, n):
             temp = arr[i]
